@@ -1,0 +1,87 @@
+.file-info {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.file-size {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.file-checksum {
+  font-size: 14px;
+  font-style: italic;
+}
+.file-upload {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.file-upload input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/*.file-upload label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}*/
+
+.file-upload label i {
+  margin-right: 10px;
+}
+
+.file-upload label:hover {
+  background-color: #2980b9;
+}
+
+.file-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px; /* ajuster la hauteur selon vos besoins */
+}
+
+.file-upload label {
+  margin-top: 20px; /* ajuster la marge supérieure selon vos besoins */
+}
+
+.file-upload i {
+  font-size: 64px; /* ajuster la taille de l'icône selon vos besoins */
+}
+
+
+
+
+
+
+.full-width {
+  width: 150%;
+  margin-left: 20px;
+  margin-right: 20px;
+}

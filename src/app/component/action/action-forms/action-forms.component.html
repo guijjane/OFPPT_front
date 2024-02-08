@@ -1,0 +1,159 @@
+<!--ajout filiale -->
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Ajouter Filiales </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <button nbButton status="primary" (click)="onOpenCreateFilialeWindows()">ajouter</button>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Listes Filiales
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>ID</th>
+          <th>NOM FILIALE</th>
+          <th>DATE</th>
+          <th>ACTION</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let file of files ;let indexOfelement=index">
+          <td>{{file.id}}</td>
+          <td>
+            <input type="radio" name="selectedFile" [(ngModel)]="selectedFile" (click)="onSelectFile()"
+                   [value]="file"/>
+            <label></label>
+          </td>
+        </tr>
+        <td><button (click)="handleValiderGest()" class="btn btn-light me-2"><i class="fa fa-check me-2"></i></button>
+          <button (click)="handleRejetGest()" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button>
+        </td>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+
+<!--ajout module -->
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Ajouter Module
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <button nbButton status="primary" (click)="onOpenCreateModuleWindows()">ajouter</button>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Listes Modules
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>ID</th>
+          <th>NOM MODULE</th>
+          <th>DATE</th>
+          <th>ACTION</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let file of files ;let indexOfelement=index">
+          <td>{{file.id}}</td>
+          <td>
+            <input type="radio" name="selectedFile" [(ngModel)]="selectedFile" (click)="onSelectFile()"
+                   [value]="file"/>
+            <label></label>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+
+<!--ajout groupe -->
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Ajouter Groupe
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <button nbButton status="primary" (click)="onOpenCreateGroupeWindows()">ajouter</button>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Listes Groupes
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>ID</th>
+          <th>NOM GROUPE</th>
+          <th>DATE</th>
+          <th>ACTION</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let file of files ;let indexOfelement=index">
+          <td>{{file.id}}</td>
+          <td>
+            <input type="radio" name="selectedFile" [(ngModel)]="selectedFile" (click)="onSelectFile()"
+                   [value]="file"/>
+            <label></label>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+
+
+
+
+

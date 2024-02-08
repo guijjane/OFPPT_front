@@ -1,0 +1,33 @@
+<nb-layout>
+  <nb-layout-header fixed>
+      <div class="mr-5">
+        <a (click)="toggleSidebar()">
+          <nb-icon icon="menu"></nb-icon>
+        </a>
+      </div>
+      <div class="img-header ml-5">
+        <img src="../../assets/logo.png">
+      </div>
+
+    <div class="nav-right" >
+      <nb-user name="ayman"
+               title="ITS"
+               [nbContextMenu]="itemsRightNav"
+               nbContextMenuTag="my-context-menu">
+
+      </nb-user>
+    </div>
+  </nb-layout-header>
+
+  <nb-sidebar>
+      <nb-menu [items]="items">
+      </nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+  <nb-layout-footer>
+    <span>help</span>
+  </nb-layout-footer>
+</nb-layout>

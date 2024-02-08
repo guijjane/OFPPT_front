@@ -1,0 +1,206 @@
+<nb-tabset>
+  <nb-tab tabTitle="Informations Formateur">
+    <form [formGroup]="formFormateur">
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">CIN : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="cin"
+            id="cin"
+            formControlName="cin"
+            required
+          />
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Nom : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="nom"
+            id="nom"
+            formControlName="nom"
+            required
+          />
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Prenom : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="prenom"
+            id="prenom"
+            formControlName="prenom"
+            required
+          />
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Adresse : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="adresse"
+            id="adresse"
+            formControlName="adresse"
+            required
+          />
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Telephone : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="telephone"
+            id="telephone"
+            formControlName="telephone"
+            required
+          />
+          <!--          <div *ngIf="formStagiaire.get('codeAgence')?.touched && formStagiaire.get('codeAgence')?.errors?.required"
+                         class="invalid-feedback d-block position-absolute">
+                      Champs obligatoire non renseigné
+                    </div>-->
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Email : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="email"
+            id="email"
+            formControlName="email"
+            required
+          />
+          <!--          <div *ngIf="formStagiaire.get('codeAgence')?.touched && formStagiaire.get('codeAgence')?.errors?.required"
+                         class="invalid-feedback d-block position-absolute">
+                      Champs obligatoire non renseigné
+                    </div>-->
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Diplome : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="diplome"
+            id="diplome"
+            formControlName="diplome"
+            required
+          />
+          <!--          <div *ngIf="formStagiaire.get('codeAgence')?.touched && formStagiaire.get('codeAgence')?.errors?.required"
+                         class="invalid-feedback d-block position-absolute">
+                      Champs obligatoire non renseigné
+                    </div>-->
+        </div>
+      </div>
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Activite : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="activite"
+            id="activite"
+            formControlName="activite"
+            required
+          />
+        </div>
+      </div>
+
+    </form>
+  </nb-tab>
+  <nb-tab tabTitle="Pices-Jointe">
+    <form [formGroup]="formFormateur">
+      <div class="col-8">
+        <div class="w-50">
+          <label class="col-form-label my-auto">cin : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="input-group">
+          <input
+            type="file"
+            name="cin"
+            class="file-upload"
+            formControlName="cin"
+            placeholder="CIN"
+            (change)="handleFileInput($event, 'cin')"
+            style="background-color: white; border: 2px solid #C8022B; border-radius: 2px; color: #C8022B;"
+          />
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="w-50">
+          <label class="col-form-label my-auto">diplome : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="input-group">
+          <input
+            type="file"
+            name="diplome"
+            class="file-upload"
+            formControlName="diplome"
+            placeholder="Diplôme"
+            (change)="handleFileInput($event, 'diplome')"
+            style="background-color: white; border: 2px solid #C8022B; border-radius: 2px; color: #C8022B;"
+          />
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="w-50">
+          <label class="col-form-label my-auto">attestationTravail : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="input-group">
+          <input
+            type="file"
+            name="AttestationTravail"
+            class="file-upload"
+            formControlName="Attestationtravail"
+            placeholder="Attestation de travail"
+            (change)="handleFileInput($event, 'attestationTravail')"
+            style="background-color: white; border: 2px solid #C8022B; border-radius: 2px; color: #C8022B;"
+          />
+        </div>
+      </div>
+      <div class="form-row d-flex justify-content-end">
+        <div class="form-group px-2 d-flex">
+          <button type="submit" class="btn btn-outline-info " style="background-color: #C8022B;color: white">Ajouter
+            Documents
+          </button>
+        </div>
+      </div>
+    </form>
+  </nb-tab>
+</nb-tabset>

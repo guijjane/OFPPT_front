@@ -1,0 +1,67 @@
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Calendrier
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <!--<div class="calendar">
+        <div class="header-row">
+          <div class="cell"></div>
+          <div class="cell lundi">Lundi</div>
+          <div class="cell mardi">Mardi</div>
+          <div class="cell mercredi">Mercredi</div>
+          <div class="cell jeudi">Jeudi</div>
+          <div class="cell vendredi">Vendredi</div>
+          <div class="cell samedi">Samedi</div>
+        </div>
+
+        <div class="data-row" *ngFor="let filiale of filiales">
+          <div class="cell filiale">{{ filiale.name }}</div>
+          <div class="cell lundi" *ngFor="let entry of filiale.schedule.lundi">
+            {{ entry.module }} avec formateur {{ entry.formateur }} ({{ entry.hours }}h)
+          </div>
+          <div class="cell mardi" *ngFor="let entry of filiale.schedule.mardi">
+            {{ entry.module }} avec formateur {{ entry.formateur }} ({{ entry.hours }}h)
+          </div>
+          <div class="cell mercredi" *ngFor="let entry of filiale.schedule.mercredi">
+            {{ entry.module }} avec formateur {{ entry.formateur }} ({{ entry.hours }}h)
+          </div>
+          <div class="cell jeudi" *ngFor="let entry of filiale.schedule.jeudi">
+            {{ entry.module }} avec formateur {{ entry.formateur }} ({{ entry.hours }}h)
+          </div>
+          <div class="cell vendredi" *ngFor="let entry of filiale.schedule.vendredi">
+            {{ entry.module }} avec formateur {{ entry.formateur }} ({{ entry.hours }}h)
+          </div>
+          <div class="cell samedi" *ngFor="let entry of filiale.schedule.samedi">
+            {{ entry.module }} avec formateur {{ entry.formateur }} ({{ entry.hours }}h)
+          </div>
+        </div>
+      </div>-->
+      <table>
+        <thead>
+        <tr>
+          <th class="filiale">Filiale</th>
+          <th class="Lundi" *ngFor="let day of daysOfWeek">{{ day }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let filiale of filiales">
+          <td class="filiale">{{ filiale.name }}</td>
+          <td class="Lundi" *ngFor="let day of daysOfWeek">
+            <div *ngFor="let schedule of filiale.schedule[day]">
+              {{ schedule.module }} with {{ schedule.formateur }} ({{ schedule.hours }}h)
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+

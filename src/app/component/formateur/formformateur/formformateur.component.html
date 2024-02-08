@@ -1,0 +1,193 @@
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Ajouter Formateur
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <button nbButton status="primary" (click)="onOpenCreateStagaireWindows()">ajouter</button>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Listes Formateur
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>ID</th>
+          <th>FILIALE</th>
+          <th>GROUPE</th>
+          <th>NOM</th>
+          <th>PRENOM</th>
+          <th>ADRESSE</th>
+          <th>TELEPHONE</th>
+          <th>EMAIL</th>
+          <th>DIPLOME</th>
+          <th>ACTIVITE</th>
+          <th>PIECES JOINTE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let file of files ;let indexOfelement=index">
+          <td>{{file.id}}</td>
+          <td>{{file.codeAgence}}</td>
+          <td>{{file.codeClient}}</td>
+          <td>{{file.nom}}</td>
+          <td>{{file.montant}}</td>
+          <td>{{file.nombreOperations}}</td>
+          <td style="color: orange" *ngIf="!file.signature">En Attente</td>
+          <td>{{file.rib}}</td>
+          <td>
+            <input type="radio" name="selectedFile" [(ngModel)]="selectedFile" (click)="onSelectFile()"
+                   [value]="file"/>
+            <label></label>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Affictation
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <nb-tab tabTitle="Filiales">
+        <form [formGroup]="formFormateur">
+          <div class="d-flex justify-content-around my-2 mx-auto p-2">
+            <div class="w-50">
+              <label class="col-form-label my-auto">Filiales:<span class="text-danger">*</span> </label>
+            </div>
+            <div class="w-50">
+              <nb-select placeholder="Form control" size="medium">
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        </form>
+      </nb-tab>
+      <nb-tab tabTitle="Groupes">
+        <form [formGroup]="formFormateur">
+          <div class="d-flex justify-content-around my-2 mx-auto p-2">
+            <div class="w-50">
+              <label class="col-form-label my-auto">Groupes:<span class="text-danger">*</span> </label>
+            </div>
+            <div class="w-50">
+              <nb-select placeholder="Form control" size="medium">
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        </form>
+      </nb-tab>
+      <nb-tab tabTitle="Formateurs">
+        <form [formGroup]="formFormateur">
+          <div class="d-flex justify-content-around my-2 mx-auto p-2">
+            <div class="w-50">
+              <label class="col-form-label my-auto">Formateurs:<span class="text-danger">*</span> </label>
+            </div>
+            <div class="w-50">
+              <nb-select placeholder="Form control" size="medium">
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        </form>
+      </nb-tab>
+      <nb-tab tabTitle="Modules">
+        <form [formGroup]="formFormateur">
+          <div class="d-flex justify-content-around my-2 mx-auto p-2">
+            <div class="w-50">
+              <label class="col-form-label my-auto">Modules:<span class="text-danger">*</span> </label>
+            </div>
+            <div class="w-50">
+              <nb-select placeholder="Form control" size="medium">
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        </form>
+      </nb-tab>
+      <nb-tab tabTitle="MasseHorraire">
+        <form [formGroup]="formFormateur">
+          <div class="d-flex justify-content-around my-2 mx-auto p-2">
+            <div class="w-50">
+              <label class="col-form-label my-auto">Masse Horraire:<span class="text-danger">*</span> </label>
+            </div>
+            <div class="w-50">
+              <nb-select placeholder="Form control" size="medium">
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        </form>
+      </nb-tab>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>ID</th>
+          <th>FILIALE</th>
+          <th>GROUPE</th>
+          <th>FORMATEURS</th>
+          <th>MODULES</th>
+          <th>MASSE HORRAIRE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let file of files ;let indexOfelement=index">
+          <td>{{file.id}}</td>
+          <td>{{file.codeAgence}}</td>
+          <td>{{file.codeClient}}</td>
+          <td>{{file.nom}}</td>
+          <td>{{file.montant}}</td>
+          <td>{{file.nombreOperations}}</td>
+          <td style="color: orange" *ngIf="!file.signature">En Attente</td>
+          <td>{{file.rib}}</td>
+          <td>
+            <input type="radio" name="selectedFile" [(ngModel)]="selectedFile" (click)="onSelectFile()"
+                   [value]="file"/>
+            <label></label>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nb-card-body>
+</nb-card>

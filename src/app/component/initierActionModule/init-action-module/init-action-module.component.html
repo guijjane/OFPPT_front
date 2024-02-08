@@ -1,0 +1,32 @@
+<nb-tabset>
+  <nb-tab tabTitle="Modules">
+    <form [formGroup]="formModule">
+      <div class="d-flex justify-content-around my-2 mx-auto p-2">
+        <div class="w-25">
+          <label class="col-form-label my-auto">Nom : <span class="text-danger">*</span> </label>
+        </div>
+        <div class="w-75">
+          <input
+            fullWidth
+            class="form-control text-uppercase"
+            nbInput
+            name="nom"
+            id="nom"
+            formControlName="nom"
+            required
+          />
+        </div>
+      </div>
+    </form>
+  </nb-tab>
+</nb-tabset>
+
+<div class="d-flex flex-row justify-content-end">
+  <button type="push" nbButton outline status="danger" class="mx-3">
+    Réinitialiser
+  </button>
+  <button type="submit" class="d-flex btn btn-dark mr-3" [disabled]="onInvalid()?true:false">
+    Ajouter Modules
+  </button>
+</div>
+

@@ -1,0 +1,44 @@
+<!--<table *ngIf="rows">
+  <thead>
+  <tr>
+    <th *ngFor="let column of columns">{{column}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of rows">
+    <td *ngFor="let column of columns">{{row[column]}}</td>
+  </tr>
+  </tbody>
+</table>-->
+
+
+<!--<div *ngFor="let d of columns">
+  <table>
+    <thead>
+    <td *ngFor="let d of jsonData.Feuil1[0] | keyvalue">{{d.key}}</td>
+    </thead>
+    <tbody>
+    <tr *ngFor="let d of jsonData.Feuil1 | keyvalue; let index=index">
+      <td *ngFor="let d of jsonData.Feuil1[index] | keyvalue">
+        {{d.value}}
+      </td>
+    </tr>
+    <tr *ngFor="let d of jsonData.Feuil2 | keyvalue; let index=index">
+      <td *ngFor="let d of jsonData.Feuil2[index] | keyvalue">
+        {{d.value}}
+      </td>
+    </tr>
+    <tr *ngFor="let d of jsonData.Feuil3 | keyvalue; let index=index">
+      <td *ngFor="let d of jsonData.Feuil3[index] | keyvalue">
+        {{d.value}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>-->
+
+{{jsonData | keyvalue}}
+<div *ngFor="let data of  jsonData">
+  tstststst
+  {{data}}
+</div>

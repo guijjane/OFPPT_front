@@ -1,0 +1,75 @@
+<nb-card>
+  <nb-card-header>Initial process</nb-card-header>
+  <nb-card-body>
+    <nb-stepper orientation="horizontal">
+        <nb-step label="step number one">
+          <div class="d-flex justify-content-center align-items-center flex-column">
+            <div class="mb-4 w-75">
+              <nb-select fullWidth placeholder="Select a process">
+                <nb-option [value]="0">Option 0</nb-option>
+                <nb-option [value]="1">Option 1</nb-option>
+                <nb-option [value]="2">Option 2</nb-option>
+                <nb-option [value]="3">Option 3</nb-option>
+                <nb-option [value]="4">Option 4</nb-option>
+              </nb-select>
+            </div>
+          </div>
+          <div class="file-upload">
+            <input type="file" id="file-input" name="file-input">
+            <label for="file-input">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <span>Choisissez un fichier</span>
+            </label>
+          </div>
+        </nb-step>
+        <nb-step label="stepLabel">
+          <ng-template #stepLabel>
+          </ng-template>
+          <div class="file-upload">
+            <input type="file" id="file-inputt" name="file-input">
+            <label for="file-input">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <span>Choisissez un fichier</span>
+            </label>
+          </div>
+        </nb-step>
+    </nb-stepper>
+  </nb-card-body>
+</nb-card>
+
+<!--
+        <nb-step label="stepLabel">
+          <ng-template #stepLabel>
+          </ng-template>
+          <div class="col-md-6">
+          </div>
+        </nb-step>
+      </nb-stepper>-->
+
+
+<!--    <div>
+      <form [formGroup]="fileForm">
+        <div class="form-group">
+          <input type="file" (change)="onFileSelected($event)" accept="application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/csv" />
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Upload</button>
+        <button type="submit" class="btn btn-primary" (click)="onSubmit2()">Upload 2</button>
+
+      </form>
+
+      <div class="alert-danger mt-5" *ngIf="errorMessage!=''">
+        <label>{{ errorMessage }}</label>
+      </div>
+      <div class="alert-info mt-5" *ngIf="fileChecksum!=''">
+        <div class="file-name" *ngIf="fileName!=''">File name: {{ fileName }}</div>
+        <div class="file-size"*ngIf="fileSize!=0">File size: {{ fileSize }} octets</div>
+        <div class="file-checksum" *ngIf="fileChecksum!=''">File Checksum : {{ fileChecksum }}</div>
+        <div class="file-checksum" *ngIf="jsonValue">jsonValue : {{ jsonValue }}</div>
+      </div>
+      <div *ngFor="let item of this.data">
+        <div *ngFor="let data of item | keyvalue">
+          {{data.key}} {{data.value | json}}
+        </div>
+      </div>
+      </div>
+      -->

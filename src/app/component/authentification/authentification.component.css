@@ -1,0 +1,22 @@
+.auth_form{
+  margin: 20% 10%;
+}
+.img_form
+{
+  width: 100%;
+}
+.img_form,.title_form
+{
+  text-align: center;
+}
+.form-fieled,.btn-form
+{
+  width: 70%;
+  margin: 2% 20% 2% 20%;
+}
+.label_form
+{
+  font-family: Calibri;
+  font-max-size: 13px;
+  font-min-size: 10px;
+}

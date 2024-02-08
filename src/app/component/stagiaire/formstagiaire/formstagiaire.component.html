@@ -1,0 +1,114 @@
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Stagiaires
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container class="text-center">
+      <button nbButton status="primary" (click)="onOpenCreateStagaireWindows()" class="mr-2">ajouter</button>
+
+      <button nbButton status="success" (click)="onEditSelectedStagiaire()" class="mr-2">Modifier</button>
+
+      <button nbButton status="danger" (click)="onDeleteSelectedStagiaire()" >Suprimer</button>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Listes Stagiaires
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>ID</th>
+          <th>FILIALE</th>
+          <th>GROUPE</th>
+          <th>CIN</th>
+          <th>NOM</th>
+          <th>PRENOM</th>
+          <th>ADRESSE</th>
+          <th>TELEPHONE</th>
+          <th>EMAIL</th>
+          <th>DIPLOME</th>
+          <th>FONCTION</th>
+          <th>FICHIER</th>
+          <th>SÉLECTIONNER</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let Stagaire of stagiaires ;let indexOfelement=index">
+          <td>{{Stagaire.id}}</td>
+          <td>{{Stagaire.filiale}}</td>
+          <td>{{Stagaire.groupe}}</td>
+          <td>{{Stagaire.cin}}</td>
+          <td>{{Stagaire.nom}}</td>
+          <td>{{Stagaire.prenom}}</td>
+          <td>{{Stagaire.adress}}</td>
+          <td>{{Stagaire.telephone}}</td>
+          <td>{{Stagaire.email}}</td>
+          <td>{{Stagaire.diplome}}</td>
+          <td>{{Stagaire.fonction}}</td>
+          <td>{{Stagaire.base64File}}</td>
+
+          <td>
+            <input type="radio" name="selectedStagiaire" (change)="onSelectStagiaire(Stagaire)">
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+
+<nb-card class="card_form">
+  <nb-card-header>
+    <h5 class="title-animation title-heading text-uppercase my-auto p-2 ">Statistique
+    </h5>
+  </nb-card-header>
+  <nb-card-body>
+    <ng-container>
+      <table class="table-sm table-striped table-bordered table-hover" style="width: 100%">
+        <thead class="table" style="background-color: #C8022B;color: white">
+        <tr>
+          <th>FILIALE</th>
+          <th>GROUPE</th>
+          <th>Stagiaire</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let Stagiaire of stagiaires ;let indexOfelement=index">
+          <td>{{Stagiaire.filiale}}</td>
+          <td>{{Stagiaire.groupe}}</td>
+          <td>{{Stagiaire.nom}}</td>
+
+        </tr>
+        </tbody>
+      </table>
+      <ul class="nav nav-pills mt-1">
+        <li  *ngFor="let item of [].constructor(this.totalPages);let i =index">
+          <a  [ngClass]="i==currentPage?'btn-danger':'btn-outline-danger'" class="btn ms-1 mt-1" (click)="goToPage(i)">{{i}}</a>
+        </li>
+      </ul>
+
+    </ng-container>
+  </nb-card-body>
+</nb-card>
+
+
+
+
+

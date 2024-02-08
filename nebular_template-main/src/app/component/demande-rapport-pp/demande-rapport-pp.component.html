@@ -1,0 +1,137 @@
+<nb-card class="card_form">
+  <nb-card-header>Demande rapport PP</nb-card-header>
+  <nb-card-body>
+    <form>
+      <fieldset class="form-group">
+        <legend>Identification</legend>
+        <div class="row">
+        <div class="col-md-3 mt-3">
+          <nb-form-field>
+            <nb-select-label>Document d'identite</nb-select-label>
+            <nb-select placeholder="identite..." >
+              <nb-option value="">Option empty</nb-option>
+              <nb-option value="0">Option 0</nb-option>
+              <nb-option value="1">Option 1</nb-option>
+              <nb-option value="2">Option 2</nb-option>
+              <nb-option value="3">Option 3</nb-option>
+              <nb-option value="4">Option 4</nb-option>
+            </nb-select>
+          </nb-form-field>
+        </div>
+        <div class="col-md-3 mt-3">
+          <nb-form-field>
+            <nb-select-label>Num d'identite</nb-select-label>
+            <input nbInput fullWidth placeholder="Num d'identite" type="text">
+          </nb-form-field>
+        </div>
+        </div>
+      </fieldset>
+      <fieldset class="form-group mt-4">
+        <legend>Informations perssonelles</legend>
+        <div class="row">
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Sexe</nb-select-label>
+              <nb-select placeholder="Sexe...">
+                <nb-option value="">Male</nb-option>
+                <nb-option value="0">Femelle</nb-option>
+              </nb-select>
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Nom</nb-select-label>
+              <input nbInput fullWidth placeholder="nom" type="text">
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Prénom</nb-select-label>
+              <input nbInput fullWidth placeholder="Prénom" type="text">
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Date de naissance</nb-select-label>
+              <input nbInput fullWidth placeholder="Date de naissance" type="date">
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Ville de residence</nb-select-label>
+              <input nbInput fullWidth placeholder="Ville de residence" type="text">
+            </nb-form-field>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="form-group mt-4">
+        <legend>Informations Credit</legend>
+        <div class="row">
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Raison de requette</nb-select-label>
+              <input nbInput fullWidth placeholder="Raison de requette" type="text">
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Type de credit</nb-select-label>
+              <nb-select placeholder="Type de credit" >
+                <nb-option value="">Option empty</nb-option>
+                <nb-option value="0">Option 0</nb-option>
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-select-label>Objet de credit</nb-select-label>
+            <nb-select placeholder="Objet de credit" >
+              <nb-option value="">Option empty</nb-option>
+              <nb-option value="0">Option 0</nb-option>
+              <nb-option value="1">Option 1</nb-option>
+              <nb-option value="2">Option 2</nb-option>
+              <nb-option value="3">Option 3</nb-option>
+              <nb-option value="4">Option 4</nb-option>
+            </nb-select>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Type de contrat</nb-select-label>
+              <nb-select placeholder="Type de contrat" >
+                <nb-option value="">Option empty</nb-option>
+                <nb-option value="0">Option 0</nb-option>
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Date de financement</nb-select-label>
+              <input nbInput fullWidth placeholder="Date de financement" type="Date">
+            </nb-form-field>
+          </div>
+          <div class="col-md-3 mt-3">
+            <nb-form-field>
+              <nb-select-label>Montant</nb-select-label>
+              <input nbInput fullWidth placeholder="Montant" type="number">
+            </nb-form-field>
+          </div>
+        </div>
+      </fieldset>
+      <div>
+        <button nbButton outline status="danger" class="mr-3">ANNULER</button>
+        <button nbButton hero status="primary">
+          <nb-icon icon="download-outline"></nb-icon>
+          Generer Rapport
+        </button>
+      </div>
+    </form>
+  </nb-card-body>
+</nb-card>
+
